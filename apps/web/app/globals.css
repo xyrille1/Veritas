@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg-primary: #0a1628;
+    --color-bg-surface: #1e3a5f;
+    --color-bg-darker: #112040;
+    --color-accent: #2563eb;
+    --color-accent-gold: #d4a017;
+    --color-text-primary: #ffffff;
+    --color-text-muted: #94a3b8;
+    --color-success: #22c55e;
+    --color-warning: #f59e0b;
+    --color-danger: #ef4444;
+  }
+
+  body {
+    @apply bg-[#0A1628] text-white font-sans;
+  }
+
+  selection {
+    @apply bg-[#2563EB] text-white;
+  }
+}
+
+@layer components {
+  .button-primary {
+    @apply bg-[#2563EB] hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold transition-all shadow-[0_0_15px_rgba(37,99,235,0.4)] hover:shadow-[0_0_25px_rgba(37,99,235,0.6)];
+  }
+
+  .button-secondary {
+    @apply bg-[#1E3A5F] hover:bg-[#2563EB] text-white px-4 py-2 rounded-lg font-semibold transition-colors;
+  }
+
+  .button-ghost {
+    @apply border-2 border-white/20 hover:border-white text-white px-4 py-2 rounded-lg font-semibold transition-all bg-white/5 hover:bg-white/10;
+  }
+
+  .button-danger {
+    @apply text-[#EF4444] border border-[#EF4444]/30 hover:bg-[#EF4444]/10 px-4 py-2 rounded-lg font-semibold transition-colors;
+  }
+
+  .card-base {
+    @apply bg-[#112040] p-4 rounded-xl border border-[#1E3A5F] hover:border-[#2563EB] transition-colors;
+  }
+
+  .badge-success {
+    @apply bg-[#22C55E]/10 text-[#22C55E] border border-[#22C55E]/30 px-2.5 py-1 rounded-full text-xs font-bold;
+  }
+
+  .badge-warning {
+    @apply bg-[#F59E0B]/10 text-[#F59E0B] border border-[#F59E0B]/30 px-2.5 py-1 rounded-full text-xs font-bold;
+  }
+
+  .badge-danger {
+    @apply bg-[#EF4444]/10 text-[#EF4444] border border-[#EF4444]/30 px-2.5 py-1 rounded-full text-xs font-bold;
+  }
+
+  .input-base {
+    @apply bg-[#1E3A5F] border border-[#1E3A5F] text-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#2563EB] transition-colors placeholder:text-[#94A3B8];
+  }
+
+  .text-muted {
+    @apply text-[#94A3B8];
+  }
+
+  .text-accent {
+    @apply text-[#2563EB];
+  }
+
+  .text-gold {
+    @apply text-[#D4A017];
+  }
+}
+
+@supports (backdrop-filter: blur(1px)) {
+  .backdrop-blur-nav {
+    @apply bg-[#0A1628]/90 backdrop-blur;
+  }
+}
