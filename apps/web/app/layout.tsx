@@ -39,9 +39,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${jetbrainsMono.variable}`}>
         <Providers>
-          <div className="min-h-screen bg-[#0A1628]">
-            {children}
-          </div>
+          <div className="min-h-screen bg-[#0A1628]">{children}</div>
         </Providers>
       </body>
     </html>
