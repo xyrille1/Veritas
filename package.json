@@ -27,6 +27,11 @@
   },
   "packageManager": "pnpm@10.30.3",
   "pnpm": {
-    "onlyBuiltDependencies": ["esbuild", "sharp", "unrs-resolver", "@tailwindcss/oxide"]
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "unrs-resolver",
+      "@tailwindcss/oxide"
+    ]
   }
 }

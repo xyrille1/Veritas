@@ -14,23 +14,23 @@ Audit scope: PRD v1.2 (FR-01 → FR-15) + runtime health check
 
 ## Functional Requirements (PRD Section 3)
 
-| ID | Feature | Status | Notes |
-|---|---|---|---|
-| FR-01 | zkLogin Authentication | ⚠️ Partial | Google login + nonce + callback exist; Slack SSO not implemented. |
-| FR-02 | Digital Twin Object View | ⚠️ Partial | Shipment drawer includes provenance/custody/IPFS/escrow, but not fully matching full PRD detail spec. |
-| FR-03 | PTB Settlement (atomic) | ⚠️ Partial | Move + PTB builder exist, but dashboard verify flow currently points to wrong API routes, so not fully operational from UI. |
-| FR-04 | Escrow Vault Contract | ✅ Implemented | `escrow_vault.move` includes fund/lock/release and pause logic. |
-| FR-05 | Sponsored Transactions | ⚠️ Partial | Server-side sponsor signing exists in `/api/settlements`; relayer architecture and full UX guarantees not complete. |
-| FR-06 | Shipment State Machine | ✅ Implemented | Move state transitions and guards are present (`Created → InTransit → PendingVerification → Verified/Disputed`). |
-| FR-07 | Compliance Dashboard | ⚠️ Partial | KPI/list/filter shell exists, but filter parity and real-time SUI event sync are incomplete (polling; websocket subscription is no-op). |
-| FR-08 | Settlement Receipt Log | ⚠️ Partial | On-chain event type exists; UI surfaces tx digest in places, but not full dedicated receipt log experience from PRD. |
-| FR-09 | CSV Export | ✅ Implemented | `/api/settlements/export` and dashboard export action exist. |
-| FR-10 | Supplier Self-Onboarding | ⚠️ Partial | Invite + onboarding flow exists, but provider coverage and full profile flow are incomplete. |
-| FR-11 | Rejection Flow | ⚠️ Partial | Reject modal + dispute PTB path exist, but current UI hook route mismatch blocks expected end-to-end path. |
-| FR-12 | USDC via DeepBook | ❌ Missing | No concrete DeepBook swap execution found in PTB/API path. |
-| FR-13 | Multi-Signature Approval | ❌ Missing | No implemented 2-of-N approval flow found. |
-| FR-14 | Role-Based Access Control | ⚠️ Partial | Session + role checks + Move RoleRegistry exist; role semantics are inconsistent in parts (e.g., incident API requires role 4). |
-| FR-15 | Supplier Payment Dashboard | ⚠️ Partial | Supplier dashboard/disputes pages exist, but PRD-complete capabilities are not fully present. |
+| ID    | Feature                    | Status         | Notes                                                                                                                                   |
+| ----- | -------------------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| FR-01 | zkLogin Authentication     | ⚠️ Partial     | Google login + nonce + callback exist; Slack SSO not implemented.                                                                       |
+| FR-02 | Digital Twin Object View   | ⚠️ Partial     | Shipment drawer includes provenance/custody/IPFS/escrow, but not fully matching full PRD detail spec.                                   |
+| FR-03 | PTB Settlement (atomic)    | ⚠️ Partial     | Move + PTB builder exist, but dashboard verify flow currently points to wrong API routes, so not fully operational from UI.             |
+| FR-04 | Escrow Vault Contract      | ✅ Implemented | `escrow_vault.move` includes fund/lock/release and pause logic.                                                                         |
+| FR-05 | Sponsored Transactions     | ⚠️ Partial     | Server-side sponsor signing exists in `/api/settlements`; relayer architecture and full UX guarantees not complete.                     |
+| FR-06 | Shipment State Machine     | ✅ Implemented | Move state transitions and guards are present (`Created → InTransit → PendingVerification → Verified/Disputed`).                        |
+| FR-07 | Compliance Dashboard       | ⚠️ Partial     | KPI/list/filter shell exists, but filter parity and real-time SUI event sync are incomplete (polling; websocket subscription is no-op). |
+| FR-08 | Settlement Receipt Log     | ⚠️ Partial     | On-chain event type exists; UI surfaces tx digest in places, but not full dedicated receipt log experience from PRD.                    |
+| FR-09 | CSV Export                 | ✅ Implemented | `/api/settlements/export` and dashboard export action exist.                                                                            |
+| FR-10 | Supplier Self-Onboarding   | ⚠️ Partial     | Invite + onboarding flow exists, but provider coverage and full profile flow are incomplete.                                            |
+| FR-11 | Rejection Flow             | ⚠️ Partial     | Reject modal + dispute PTB path exist, but current UI hook route mismatch blocks expected end-to-end path.                              |
+| FR-12 | USDC via DeepBook          | ❌ Missing     | No concrete DeepBook swap execution found in PTB/API path.                                                                              |
+| FR-13 | Multi-Signature Approval   | ❌ Missing     | No implemented 2-of-N approval flow found.                                                                                              |
+| FR-14 | Role-Based Access Control  | ⚠️ Partial     | Session + role checks + Move RoleRegistry exist; role semantics are inconsistent in parts (e.g., incident API requires role 4).         |
+| FR-15 | Supplier Payment Dashboard | ⚠️ Partial     | Supplier dashboard/disputes pages exist, but PRD-complete capabilities are not fully present.                                           |
 
 ## Product Surface Coverage (high-level)
 
